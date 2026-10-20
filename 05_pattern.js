@@ -32,7 +32,7 @@ function draw(world, target) {
         for (let col = 0; col < 16; col++) {
             const x = col * 64;
             const y = row * 64;
-            const source = (row * col) % 3 === 0 ? source1 : source2;
+            const source = (row ** col) % 3 === 0 ? source1 : source2;
             r.DrawTextureRec(target.texture, source, { x, y }, r.WHITE);
         }
     }
